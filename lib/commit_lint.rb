@@ -1,4 +1,4 @@
-require "commit_lint/version"
+require 'commit_lint/version'
 
 module CommitLint
   # Your code goes here...
