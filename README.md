@@ -1,8 +1,6 @@
-# CommitLint
+# :rabbit2:CommitLint
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/commit_lint`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A fully configurable git commit message linter CLI tool, based on https://conventionalcommits.org standards.
 
 ## Installation
 
@@ -22,7 +20,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just type commit-lint in a Git project's folder to start linting your last
+commit,
+
+    $ commit-lint
+
+to run commit-lint against you current branch run
+
+    $ commit-lint -b
+
+or other branche,
+
+    $ commit-lint -b other-branche-name
+
+commits range
+
+    $ commit-lint -c 2343..2342
+
+and you can add `-a` flag to run autocorrect against failing commits
+
+    $ commit-lint -a
 
 ## Development
 
@@ -32,7 +49,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/commit_lint. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/adham90/commit-lint. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
