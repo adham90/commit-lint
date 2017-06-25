@@ -1,3 +1,24 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH.unshift(File.dirname(File.realpath(__FILE__)) + '/../lib')
+
 require 'commit_lint'
+require 'benchmark'
+require 'highline'
+
+def separator(symbol = '-', size = nil)
+  size ||= HighLine::SystemExtensions.terminal_size.first
+  puts symbol * size
+end
+
+result = 0
+
+time = Benchmark.realtime do
+  result = CommitLint.run
+end
+
+time = "Finished in #{time} seconds"
+
+puts time
+separator
+puts result
